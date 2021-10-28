@@ -1,0 +1,22 @@
+.row{
+    background-color: orangered;
+    height: 100vmax;
+    color: white;
+}
+li{
+    list-style: none;
+
+}
+nav,ul{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    color: white;
+}

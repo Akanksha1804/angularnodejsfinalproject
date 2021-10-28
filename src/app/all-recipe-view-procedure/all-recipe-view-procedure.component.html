@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <p>Name</p>
+        </div>
+        <div class="col-lg-9">
+            <p>{{result.recipe}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <p>Ingredients</p>
+        </div>
+        <div class="col-lg-9">
+            <ul>
+                <li *ngFor="let x of result.ingredients">
+                    {{x}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3">
+            <p>Process</p>
+        </div>
+        <div class="col-lg-9">
+            <ul>
+                <li *ngFor="let x of result.steps">
+                    {{x}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+

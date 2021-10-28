@@ -1,0 +1,40 @@
+<div class="row">
+    <h3>Find your recipe</h3>
+        <form [formGroup]="findRecipeForm" (ngSubmit)="find()">
+            <div class="row mb-4 mt-3">
+                <div class="col-lg-6">
+                    <label class="mb-2">Select the cuisine</label>
+                    <select class="form-control" formControlName="cuisine">
+                        <option *ngFor="let c of cuisines">{{c}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label class="mb-2">Select the diet</label>
+                    <select class="form-control" formControlName="diet">
+                        <option *ngFor="let d of diets">{{d}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-lg-6">
+                    <label class="mb-2">Select your intolerances</label>
+                    <select class="form-control" formControlName="intolerance">
+                        <option *ngFor="let x of intolerances">{{x}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label class="mb-2">Select the meal type</label>
+                    <select class="form-control" formControlName="meal">
+                        <option *ngFor="let x of meals">{{x}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2">
+                    <input type="submit" value="Find Recipe" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+</div>

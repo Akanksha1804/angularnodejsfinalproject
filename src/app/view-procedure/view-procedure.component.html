@@ -1,0 +1,16 @@
+<div class="conatiner" *ngIf="isEmpty">
+    <p>
+        Sorry!, the procedure doesnt exist for this recipe
+    </p>
+</div>
+
+
+
+<div class="container" *ngIf="!isEmpty">
+    <h1>Procedure</h1>
+    <div>
+        <ul>
+            <li *ngFor="let obj of result">{{obj.step}}</li>
+        </ul>
+    </div>
+</div>

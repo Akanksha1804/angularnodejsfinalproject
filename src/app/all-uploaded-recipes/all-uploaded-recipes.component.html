@@ -1,0 +1,21 @@
+<div class="container" *ngIf="allrecipelist.length==0">
+  <p>No uploaded recipes yet!!!</p>
+</div>
+
+<div class="container">
+    <div class="card m-2" style="width: 18rem;" *ngFor="let recipe of allrecipelist">
+        <img src={{recipe.image}} class="card-img-top" alt="..." style="width:286px;height: 286px;">
+        <div class="card-body">
+          <h5 class="card-title">{{recipe.recipe}}</h5>
+          <div class="row">
+            <div class="col-lg-6">
+              <button [routerLink]="['viewallrecipedetails',recipe._id]" class="btn btn-info mb-3">
+                View details
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>  
+</div>
+
+

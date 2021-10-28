@@ -1,0 +1,17 @@
+<div class="container" *ngIf="isEmpty">
+    <p>Sorry! couldn't find recipe with your inputs, try another combinations</p>
+</div>
+
+
+
+
+<div class="container" *ngIf="!isEmpty">
+    <div class="card m-2" style="width: 18rem;" *ngFor="let recipe of result">
+        <img src={{recipe.image}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{recipe.title}}</h5>
+          <button [routerLink]="['../viewprocedure',recipe.id]" class="btn btn-primary">Click to view procedure</button>
+        </div>
+    </div>  
+</div>
+
